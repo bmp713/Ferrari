@@ -1,161 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ferrari | F458</title>
+	<title>Ferrari | F488</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="Position.css">
 	<script src="Position.js"></script> 
 </head>
 <body>
+	<div id="slideshow">
+		<a onclick="changeImage()">
+			<div id="slide_container">
+				<img id="slide_image">
+				<a onclick="closeSlideShow()">
+					<div id="slide_close">
+						<h3>Close</h3>
+					</div>
+				</a>
+			</div>
+		</a>
+	</div>
 
 	<div id="container">
-
         <!-- Width of slide menu is 0 by default, defined 400px after clicking -->
     	<div id="slide-menu">
        		<a id="close-slide" onclick="closeSlideMenu()"><span style="font-size: 16px;">&#8592;</span></a>
        		<a onclick="smoothScroll('header')">Home</a>
        		<a onclick="smoothScroll('content_2')">Gallery</a>
        		<a onclick="smoothScroll('content_3')">Contact</a>
-       		<a onclick="smoothScroll('footer')">Social Media</a>
        		<a onclick="openSlideShow()">Slideshow</a>
    		</div>
 
-		<div id="slideshow">
-			<a onclick="changeImage()">
-				<div id="slide_container">
-					<img id="slide_image">
-					<img id="next_image">
-					<a onclick="closeSlideShow()" id="slide_close">
-						<h3>Close</h3>
-					</a>
-				</div>
-			</a>
-		</div>
+		<header id="header">
+			<img src="assets/images/Ferrari_logo_15.png">
+			<form>
+				<input id="input" name="search" type="text" placeholder="Search site..."><br>
+				<input id="submit" type="submit" value="Search"><br>
+			</form>
+		</header>
+
+   		<div id="navbar">
+        	<a onclick="openSlideMenu()">Menu</a>
+            <a onclick="smoothScroll('navbar')">Home</a>
+           	<a onclick="smoothScroll('content_2')">Gallery</a>
+         	<a onclick="smoothScroll('content_3')">Contact</a>
+        </div>
 
 		<div id="content">
 
-			<a onclick="smoothScroll('content_1')">
-				<header id="header">
-				</header>
-			</a>
-
-			<nav id="navbar">
-        		<a onclick="openSlideMenu()" class="nav-button">Menu</a>
-           		<a onclick="smoothScroll('navbar')" class="nav-button">Home</a>
-           		<a onclick="smoothScroll('content_2')" class="nav-button">Gallery</a>
-         		<a onclick="smoothScroll('content_3')" class="nav-button">Contact</a>
-         		<a onclick="smoothScroll('footer')" class="nav-button">Social</a>
-        	</nav>
-
-			<div id="main">
-
-				<a onclick="smoothScroll('content_2')">
-					<div id="content_1">
-
-						<div id="parallax_1">
-						</div>
-
-						<div id="box_1">
-							<div id="box_1_text">
-								<h1>Ferrari F458</h1><br><br>
-								<br><h3>Specifications</h3><br>
-								<p>In Ferrari's first official announcement of the car, 458 was described as the successor to the F430 
-								but arising from an entirely new design, incorporating technologies developed from the company's experience 
-								in Formula 1. The body computer system was developed by Magneti Marelli Automotive Lighting.</p>
+			<div id="content_1">
+				<div id="video_container">
+          			<video src="assets/video/Ferrari.mp4" autoplay loop muted>
+        			</video>
+       			</div>
+			</div>
 			
-								<br><h3>Engine</h3><br>
-								<p>The 458 is powered by a 4,499 cc (274.5 cu in) V8 engine of the "Ferrari/Maserati" F136 engine family, 
-								producing 570 PS (419 kW; 562 hp) at 9,000 rpm (redline) and 540 N·m (398 lb·ft) at 6,000 rpm[7] with 80% 
-								torque available at 3,250 rpm.[6] The engine features direct fuel injection, which is a first for Ferrari 
-								mid-engine setups in its road cars.</p>
+			<div id="content_2">
+
+				<div id="column_1">
+					<h1>Ferrari F488</h1><br>
+					<p>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					Some random content to demonstrate parallax.<br>
+					</p>
+				</div>
 					
-								<br><h3>Transmission</h3><br>
-								<p>The only transmission available on the 458 is a dual-clutch 7-speed Getrag gearbox, in a different state 
-								of tune shared with the Mercedes-Benz SLS AMG.[6] There is no traditional manual option, making this the fourth 
-								road-car after the Enzo, Challenge Stradale and 430 Scuderia not to be offered with Ferrari's classic gated manual. 
-								It is the first mainstream model to not be offered with a manual transmission.</p>
-							</div>
-						</div>
+				<div id="column_2">
+					<img src="assets/images/Ferrari_8.jpg">
+					<p>Price: $249,500
+					</p>
+				</div>
+				<div id="column_3">
+					<img src="assets/images/Ferrari_17 (2).jpg">
+					<p>Price: $469,500<br> 
+					Ferrari F458 Limited Edition<br>
+					</p>
+				</div>
 
-					</div>
-				</a>
-				
-				<a onclick="smoothScroll('content_3')">
-					<div id="content_2">	
-
-						<div id="parallax_2">
-						</div>			
-						
-						<div id="row_1">
-							<div id="column_11">
-								<h1>Ferrari F458</h1><br>
-								<p>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								Some random content to demonstrate parallax.<br>
-								</p>
-							</div>
-							<div id="column_12">
-								<img src="assets/images/Ferrari_8.jpg">
-								<p>Price: $249,500
-								</p>
-							</div>
-							<div id="column_13">
-								<img src="assets/images/Ferrari_17 (2).jpg">
-								<p>Price: $469,500<br> 
-								Ferrari F458 Limited Edition<br>
-								</p>
-							</div>
-
-						</div>		
-					</div>
-				</a>
+			</div>
 			
-			</div> <!-- End main -->
-
-			<br><br>
-
 			<div id="content_3">
 
-				<div id="parallax_3">
-					<div id="video_container">
-          				<video src="assets/video/Ferrari_5.mp4" autoplay loop muted>
-         				</video>
-       				</div>
-				</div>
-				
-				<!--<a onclick="smoothScroll('footer')"><img id="logo" src="assets/images/Ferrari_logo.png"></a><br>-->
-				<!--<a onclick="smoothScroll('header')"><img id="social" src="assets/images/Icon-social-media-horiz.png"></a>-->
-			</div>
-
-			<a onclick="smoothScroll('header')">
-				<footer id="footer">
+				<br><br><h1>Ferrari F488</h1><br><br>
+				<br><h3>Specifications</h3><br>
+				<p>In Ferrari's first official announcement of the car, 458 was described as the successor to the F430 
+				but arising from an entirely new design, incorporating technologies developed from the company's experience 
+				in Formula 1. The body computer system was developed by Magneti Marelli Automotive Lighting.</p>
+			
+				<br><h3>Engine</h3><br>
+				<p>The 488 is powered by a 4,499 cc (274.5 cu in) V8 engine of the "Ferrari/Maserati" F136 engine family, 
+				producing 570 PS (419 kW; 562 hp) at 9,000 rpm (redline) and 540 N·m (398 lb·ft) at 6,000 rpm[7] with 80% 
+				torque available at 3,250 rpm.[6] The engine features direct fuel injection, which is a first for Ferrari 
+				mid-engine setups in its road cars.</p>
 					
-					<div id="social_buttons">
-						<a href="http://www.twitter.com/ferrari">
-							<img src="assets/images/Icon_twitter.png"></a>
-						<a href="http://www.instagram.com/ferrari">
-							<img src="assets/images/Icon-instagram.png"></a>
-						<a href="http://www.facebook.com/Ferrari">
-							<img src="assets/images/Icon_facebook.png"></a>
-						<a href="https://www.youtube.com/channel/UCd8iY-kEHtaB8qt8MH--zGw">
-							<img src="assets/images/Icon_youtube.png"></a>
-					</div>
+				<br><h3>Transmission</h3><br>
+				<p>The only transmission available on the 458 is a dual-clutch 7-speed Getrag gearbox, in a different state 
+				of tune shared with the Mercedes-Benz SLS AMG.[6] There is no traditional manual option, making this the fourth 
+				road-car after the Enzo, Challenge Stradale and 430 Scuderia not to be offered with Ferrari's classic gated manual. 
+				It is the first mainstream model to not be offered with a manual transmission.</p>
+					
+				<div id="social_buttons">
+					<a href="http://www.twitter.com/ferrari">
+						<img src="assets/images/Icon_twitter.png"></a>
+					<a href="http://www.instagram.com/ferrari">
+						<img src="assets/images/Icon-instagram.png"></a>
+					<a href="http://www.facebook.com/Ferrari">
+						<img src="assets/images/Icon_facebook.png"></a>
+					<a href="https://www.youtube.com/channel/UCd8iY-kEHtaB8qt8MH--zGw">
+						<img src="assets/images/Icon_youtube.png"></a>
+				</div>
 
-				</footer>
-			</a>
+			</div>
 			
 		</div> <!-- End content -->
+
 	</div> <!-- End container -->
+
 </body>
 </html>
 
