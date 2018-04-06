@@ -1,12 +1,15 @@
-body{
-	background: url("assets/images/Ferrari_342.jpg") no-repeat fixed; 
-	background-size: cover;
-}
+body, div, h1, h2, h3, p, ul, li{ margin: 0px; padding: 0px; box-sizing: border-box; display: block;} 
+a{ cursor: pointer; text-decoration: none; }
+
 #container{
 	overflow: hidden;
 	margin: auto;
 	width: 80%;
+
+	background: url("assets/images/Ferrari_28.jpg") no-repeat fixed;
+	background-size: cover;
 }
+
 #header{
 	position: relative;
 	height: 150px;
@@ -50,7 +53,13 @@ body{
 		cursor: pointer;
 		margin-top: 15px;
 		background: rgba(150, 150, 150, 0.7);
+		transition: background 1s;
 	}
+	#submit:hover{
+		transition: background 1s;
+		background: rgba(200, 200, 200, 1);		
+	}
+
 
 #navbar{
 	position: relative;
@@ -79,80 +88,147 @@ body{
    		color: white;
 	}
 
+
 #content{		
 	position: relative;
+	margin: 40px auto 0px auto;
 	width: 100%;
 	z-index: 0;
-	font: 14px sans-serif;
-
 }
-#content_1{
-	position: relative;
-	width: 100%;
-	height: 840px;
-	filter: brightness(70%);
-	transition: filter 1s;
-	animation: fadein 4s;
-}
+	#content_1{
+		animation: fadein 4s;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+		margin: 0px auto 0px auto;
+		padding: 200px 100px 400px 100px;
+		background: rgba(1, 1, 1, 0.3);
+		transition: background 1s, color 2s;
+	}
 	#content_1:hover{
-		transition: filter 1s;
-		filter: brightness(100%);
+		transition: background 1s, color 2s;
+		background: rgba(1, 1, 1, 0);
 	}
-	#video_container{
-		position: fixed;
-		top: -100;
-		left: 0;
+	#background_1{
+		position: relative;
+		margin: auto;
 		width: 100%;
-		background: rgba(10, 10, 10, 1);
+		z-index: 1;
+		background: url("assets/images/Ferrari_87.jpg") no-repeat fixed;
+		background: cover;
 	}
-	#video_container video{
-		position: fixed;
+		.content_1_expand{
+			position: relative;
+			margin: 100px auto;
+			width: 30%;
+			padding: 15px 10px;
+
+			color: rgba(200, 200, 200, 1);
+			font: 16px sans-serif;
+			border: 1px solid rgba(200, 200, 200, 1);
+			background: rgba(20, 1, 1, 0.7);
+			transition: background 1s, border 2s, color 3s;
+		}
+		.content_1_expand:hover{
+			transition: background 1s, border 2s, color 3s;
+			background: rgba(20, 1, 1, 0.7);
+			border: 1px solid white;
+			color: white;
+		}
+		#banner{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			z-index: 3;
+			padding: 50px 50px 125px 50px;
+
+			color: gray;
+			font: 48px sans-serif;
+			text-align: center;
+			background: rgba(20, 1, 1, 0.7);
+			border: 1px solid gray;
+			animation-name: fadein; animation-duration: 6s;
+			transition: background 1s, border 1s, color 2s;
+		}
+		#banner:hover{
+			transition: background 1s, border 1s, color 2s;
+			background: rgba(10, 10, 10, 0.7);
+			border: 1px solid white;
+			color: white;
+		}
+		#specifications{
+			position: relative;
+			display: none;
+			margin: 50px auto 0px auto;
+			padding: 50px 50px;
+			color: white;
+			font: 16px sans-serif;
+			background: rgba(20, 1, 1, 0.7);
+			animation-name: fadein; animation-duration: 5s;
+			transition: background 1s;
+		}
+		#specifications:hover{
+			transition: background 1s;
+			background: rgba(50, 10, 10, 0.7);
+		}
+
+
+	#content_2{
+		position: relative;
+		float: left;
 		width: 100%;
-		top: 0;
-		z-index: -99;
+		z-index: 99;
+		margin: 0px auto 0px auto;
+		padding: 300px 50px 700px 50px;
+
+		color: darkgray;
+		font: 16px sans-serif;
+		background: rgba(1, 1, 1, 0.2);
+		transition: background 1s, color 1s;
 	}
-
-#content_2{
-	position: relative;
-	float: left;
-	width: 100%;
-	color: white;
-	padding: 100px 50px 700px 50px;
-	background: url("assets/images/Ferrari_172.jpg") no-repeat fixed; 
-	background-size: cover;
-}
-	#column_1{
-		float: left; 
-		width: 50%;
-		margin-left: 40px;
-		padding: 25px 25px 500px 25px;
-		cursor: pointer;
-
+	#content_2:hover{
+		transition: background 1s, color 1s;
+		background: rgba(1, 1, 1, 0);
 		color: white;
-		background: rgba(100, 0, 0, 0.6);
-		box-shadow: 10px 10px 25px black;
-		text-shadow: 10px 10px 20px rgba(20, 0, 0, 1);
-		transition: box-shadow 0.5s, background 0.5s;
 	}
+	#background_2{
+		position: relative;
+		margin: auto;
+		width: 100%;
+		z-index: 1;
+		float: left;
+		background: url("assets/images/Ferrari_17.jpg") no-repeat fixed; 
+		background-size: cover;
+	}
+		#column_1{
+			float: left; 
+			width: 50%;
+			margin-left: 40px;
+			padding: 50px 100px 500px 100px;
+			cursor: pointer;
+
+			background: rgba(100, 0, 0, 0.6);
+			box-shadow: 10px 10px 25px black;
+			transition: box-shadow 0.5s, background 0.5s;
+		}
 		#column_1:hover{
 			transition: box-shadow 0.5s, background 0.5s;
 			background: rgba(100, 0, 0, 0.5);
 			box-shadow: 20px 20px 100px black;
-		}
-	#column_2{
-		margin-left: 20px;
-		transition: background 0.5s;
-		height: 100%;
-		float: left; 
-		width: 20%;
-		padding: 50px 25px 400px 25px;
-		cursor: pointer;
+		}	
+		#column_2{
+			margin-left: 20px;
+			transition: background 0.5s;
+			height: 100%;
+			float: left; 
+			width: 20%;
+			padding: 50px 25px 400px 25px;
+			cursor: pointer;
 
-		background: rgba(100, 0, 0, 0.6);
-		box-shadow: 10px 10px 25px black;
-		text-shadow: 10px 10px 20px rgba(20, 0, 0, 1);
-		transition: box-shadow 0.5s, background 0.5s;
-	}
+			background: rgba(100, 0, 0, 0.6);
+			box-shadow: 10px 10px 25px black;
+			transition: box-shadow 0.5s, background 0.5s;
+		}
 		#column_2:hover{
 			transition: box-shadow 0.5s, background 0.5s;
 			background: rgba(100, 0, 0, 0.5);
@@ -169,19 +245,18 @@ body{
 			box-shadow: 5px 5px 30px black;
 			filter: brightness(100%);
 		}
-	#column_3{
-		margin-left: 20px;
-		height: 100%;
-		float: left; 
-		width: 20%;
-		padding: 50px 25px 300px 25px;
-		cursor: pointer;
+		#column_3{
+			margin-left: 20px;
+			height: 100%;
+			float: left; 
+			width: 20%;
+			padding: 50px 25px 300px 25px;
+			cursor: pointer;
 
-		background: rgba(100, 0, 0, 0.6);
-		box-shadow: 10px 10px 25px black;
-		text-shadow: 10px 10px 20px rgba(20, 0, 0, 1);
-		transition: box-shadow 0.5s, background 0.5s;
-	}
+			background: rgba(100, 0, 0, 0.6);
+			box-shadow: 10px 10px 25px black;
+			transition: box-shadow 0.5s, background 0.5s;
+		}
 		#column_3:hover{
 			transition: box-shadow 0.5s, background 0.5s;
 			background: rgba(100, 0, 0, 0.5);
@@ -199,39 +274,93 @@ body{
 			filter: brightness(100%);
 		}
 
-#content_3{
-	position: relative;
-	overflow: hidden;
-	clear: both;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 1000px;
-	padding: 100px 50px 50px 50px;
+		#background_3{
+			background: url("assets/images/Ferrari_28.jpg") no-repeat fixed;
+			background-size: cover;			
+		}
 
-	color: white;
-	font: 14px sans-serif;
-	background: rgba(1, 1, 1, 0.5);
-	background: rgba(1, 1, 1, 0.8);
-	transition: background 1s;
-}
+
+	#content_3{
+		position: relative;
+		margin: auto;
+		width: 100%;
+		clear: both;
+		padding: 200px 50px 700px 50px;
+
+		color: rgba(200, 200, 200, 1);
+		cursor: pointer;
+		font: 16px sans-serif;
+		text-align: left;
+		background: rgba(1, 1, 1, 0.2);
+		transition: background 1s;
+	}
 	#content_3:hover{
 		transition: background 1s;
-		background: rgba(1, 1, 1, 0.5);
+		background: rgba(1, 1, 1, 0);
+	}
+	#content_3 p h1 h2 h3{
+		position: relative;
+		margin: auto;
+		width: 50%;
+		color: white;
+		text-align: left
 	}
 	#content_3 p{
 		width: 50%;
+		text-align: left;
 	}
-	#content_3 img{
-		float: left;
-		width: 50px;
-		padding: 15% 10% 10% 10%;
-		transition: width 1s;
-	}	
-	#content_3 img:hover{
-		width: 100px;
-		transition: width 1s;
+
+
+	#footer{
+		position: absolute;
+		margin: 100px auto 0px auto;
+		bottom: 0;
+
+		color: white;
+		cursor: pointer;
+	 	font: 16px sans-serif;
+		background: none;
+		background: rgba(11, 1, 1, 0.7);
+		transition: background 1s;
 	}
+	#footer:hover{
+		transition: background 1s;
+		background: rgba(10, 1, 1, 0);
+	}
+		#footer_social{
+			position: relative;
+			margin: auto;
+			z-index: 99;
+		}
+		#footer_social img{
+			width: 5%;
+			padding: 5% 9% 5% 9%;
+			transition: width 1s;
+		}
+		#footer_social img:hover{
+			width: 7%;
+			transition: width 1s;
+		}
+		#footer_copyright p{
+			position: relative;
+			margin: auto;
+			clear: both;
+			width: 100%;
+			padding: 50px 50px;
+
+			cursor: pointer;
+			text-align: center;
+			color: rgba(200, 200, 200, 0.5);
+			background: rgba(1, 1, 1, 0.7);
+			transition: background 1s, color 1s;
+		}
+		#footer_copyright:hover{
+			transition: background 1s, color 1s;	
+			background: rgba(10, 1, 1, 0);
+			color: white;
+		}
+
+
 
 
 #slide-menu{
@@ -243,34 +372,33 @@ body{
 	z-index: 3;
     background: linear-gradient( rgba(100, 50, 50, 0.7), rgba(1, 1, 1, 1) );
     box-shadow: 5px 5px 25px black;
-    transition: width 1s;        
+    transition: width 0.5s;        
 }
 #close-slide{ 
-   	transition: width 1s;
+   	transition: width 0.5s;
     background-color: rgba(100, 50, 50 , 0.7);
 }
-#slide-menu a{
-   	display: block;
-   	padding: 10px 10px 10px 30px;
+	#slide-menu a{
+   		display: block;
+   		padding: 10px 10px 10px 30px;
 
-    color: #cccccc;
-    font: 16px sans-serif;
-	box-shadow: none;
-	text-shadow: 10px 10px 20px rgba(20, 0, 0, 1);
-    transition: box-shadow 1s, text-shadow 1s, color 1s, background 1s;
-}
-#slide-menu a:hover{
-   	transition: box-shadow 1s, text-shadow 1s, color 1s, background 1s;
-	text-shadow: 15px 15px 40px rgba(20, 0, 0, 1);
-    box-shadow: 2px 2px 20px rgba(1, 1, 1, 0.7);
-    background: rgba(150, 150, 150, 0.5);
-    color: white;
-}
+    	color: #cccccc;
+	    font: 16px sans-serif;
+		box-shadow: none;
+		text-shadow: 10px 10px 20px rgba(20, 0, 0, 1);
+    	transition: box-shadow 1s, text-shadow 1s, color 1s, background 1s;
+	}
+	#slide-menu a:hover{
+   		transition: box-shadow 1s, text-shadow 1s, color 1s, background 1s;
+		text-shadow: 15px 15px 40px rgba(20, 0, 0, 1);
+    	box-shadow: 2px 2px 20px rgba(1, 1, 1, 0.7);
+    	background: rgba(150, 150, 150, 0.5);
+    	color: white;
+	}
 
 
 #slideshow{
 	position: fixed;	/* Must be fixed position to stay covering page */
-	overflow: hidden;   /* When slideshow closed overflow hides all div elements */
 	display: block;
 	margin: auto;
 	width: 120%;
@@ -286,56 +414,56 @@ body{
 	transition: height 1s, background 1s;
 	background: rgba(1, 1, 1, 0.9);
 }
-#slide_container{
-	display: block;
-	position: relative;
-	overflow: hidden;   /* When slideshow closed overflow hides all div elements */
-	margin: auto;	
-	width: 75%;
-	height: 75%;	
-	top: 10%;
-	z-index: 6;
+	#slide_container{
+		display: block;
+		position: relative;
+		overflow: hidden;   /* When slideshow closed overflow hides all div elements */
+		margin: auto;	
+		width: 80%;
+		height: 80%;	
+		top: 10%;
+		z-index: 6;
 
-	font: 12px sans-serif;
-	box-shadow: none;
-	background: rgba(50, 1, 1, 0.5);
-	transition: box-shadow 1s, background 1s;
-}
-#slide_container:hover{
-	box-shadow: 5px 5px 30px black;
-	background: rgba(50, 1, 1, 0.7);
-	transition: box-shadow 1s, background 1s;
-}
-/* Type img not div */
-#slide_image{
-	display: block;
-	margin: auto;
-	width: 75%;
-	z-index: 0;
-	filter: brightness(50%);
-	box-shadow: none;
-	transition: box-shadow 1s, filter 1s;
-}
-#slide_image:hover{
-	filter: brightness(100%);
-	box-shadow: 5px 5px 30px black;
-	transition: box-shadow 1s, filter 1s;
-}
-#slide_close{
-	position: absolute; 
-	z-index: 5;
-	bottom: 0;
-	left: 0;
+		font: 12px sans-serif;
+		box-shadow: none;
+		background: rgba(50, 1, 1, 0.5);
+		transition: box-shadow 1s, background 1s;
+	}
+	#slide_container:hover{
+		box-shadow: 5px 5px 30px black;
+		background: rgba(50, 1, 1, 0.7);
+		transition: box-shadow 1s, background 1s;
+	}
+	/* Type img not div */
+	#slide_image{
+		display: block;
+		margin: auto;
+		width: 75%;
+		z-index: 0;
+		filter: brightness(50%);
+		box-shadow: none;
+		transition: box-shadow 1s, filter 1s;
+	    animation-name: fadein; animation-duration: 2s; 
+	}
+	#slide_image:hover{
+		filter: brightness(100%);
+		box-shadow: 5px 5px 30px black;
+		transition: box-shadow 1s, filter 1s;
+	}
+	#slide_close{
+		position: absolute; 
+		z-index: 5;
+		bottom: 0;
+		left: 0;
 	
-	color: white;
-	padding: 10px 50px 10px 50px;
-	border: 2px solid white;
-	border-radius: 2px;
-}
+		color: white;
+		padding: 10px 50px 10px 50px;
+		border: 2px solid white;
+		border-radius: 2px;
+	}
 
 /* Transitions only react to input. 
-Key Frames create transitions without input. 
-*/
+Key Frames create transitions without input. */
 @keyframes slidein{
 	from{ width: 0px; }
 	to  { width: 100%;}
@@ -363,6 +491,11 @@ Key Frames create transitions without input.
 
 
 @media( max-width: 768px ){
+
+	body{
+		background: url("assets/images/Ferrari_342.jpg") no-repeat fixed; 
+		background-size: 0px;
+	}
 	#container{
 		width: 100%;
 	}
@@ -370,32 +503,90 @@ Key Frames create transitions without input.
 		display: none;
 	}
 	#navbar{
-		width: 120%;
+		position: fixed;
+		width: 100%;
 		z-index: 2;
 		top: 0;
 	}
+	#navbar a{
+		position: relative;
+		float: left;
+		width: 25%;	
+		padding: 15px 0px 5px 0px;
+
+		color: rgb(200, 200, 200);
+		text-align: center;
+		font: 14px sans-serif;
+		background: rgba(50, 1, 1, 0.9);
+   		transition: color 1s, background 1s;
+   		animation-name: fadein; animation-duration: 4s;
+	}
 
 	#content{		
-		margin-left: 0; 		/* Needed for sliding menu */
+		margin: 50px auto 0px auto;
 		transition: 1s;
 		width: 100%;
 	}
 	#content_1{
+		padding: 50px 0px 0px 0px;
 		width: 100%;
-		height: 550px;
-		padding: 0px
+		height: 700px;
+		background: url("assets/images/Ferrari_100.jpg") no-repeat fixed; 
+		background-size: cover;
+		filter: none;
 	}
-		#video_container{
-			overflow: hidden;
-			width: 100%;
-			top: -100;
-			left: 0;
+	#content_1:hover{
+		transition: none;
+		background: url("assets/images/Ferrari_100.jpg") no-repeat fixed; 
+		background-size: cover;
+	}
+		#banner{
+			position: relative;
+			margin: 50px auto 50px auto;
+			width: 80%;
+			z-index: 3;
+			padding: 50px 50px 125px 50px;
+
+			color: white;
+			font: 48px sans-serif;
+			text-align: center;
+			background: rgba(10, 10, 10, 0.7);
+			border: 1px solid gray;
+			animation-name: fadein; animation-duration: 6s;
+			transition: background 1s, border 1s, color 2s;
 		}
-		#video_container video{
-			width: 250%;
-			z-index: -9;
-			top: 0;
+		#specifications{
+			position: relative;
+			display: none;
+			margin: 50px auto 0px auto;
+			padding: 50px 50px;
+			color: white;
+			font: 12px sans-serif;
+			background: rgba(20, 1, 1, 0.8);
+			animation-name: fadein; animation-duration: 5s;
+			transition: background 1s;
 		}
+
+
+		.content_1_expand{
+			position: relative;
+			margin: 100px auto;
+			width: 30%;
+			padding: 15px 50px;
+
+			color: rgba(200, 200, 200, 1);
+			font: 16px sans-serif;
+			border: 1px solid rgba(200, 200, 200, 1);
+			background: rgba(20, 1, 1, 0.7);
+			transition: background 1s, border 2s, color 3s;
+		}
+		.content_1_expand:hover{
+			transition: background 1s, border 2s, color 3s;
+			background: rgba(20, 1, 1, 0.7);
+			border: 1px solid white;
+			color: white;
+		}
+
 
 	#content_2{
 		width: 100%;
@@ -405,21 +596,21 @@ Key Frames create transitions without input.
 	}
 		#column_1{
 			width: 100%;
-			margin-left: 0px;
-			padding: 25px 25px 200px 25px;
+			margin: 50px auto;
+			padding: 25px 25px 100px 25px;
 		}
 		#column_2{
 			width: 100%;
-			margin-left: 0px;
-			padding: 50px 25px 200px 25px;
+			margin: 50px auto;
+			padding: 50px 25px 100px 25px;
 		}
 		#column_2 img{
 			width: 100%;
 		}
 		#column_3{
 			width: 100%;
-			margin-left: 0px;
-			padding: 50px 25px 200px 25px;
+			margin: 50px auto;
+			padding: 50px 25px 100px 25px;
 		}
 		#column_3 img{
 			width: 100%;
@@ -432,7 +623,11 @@ Key Frames create transitions without input.
 		height: 100%;
 		padding: 50px 50px 50px 50px;
 		font: 14px sans-serif;
+		color: white;
+		background: url("assets/images/Ferrari_28.jpg") no-repeat fixed; 
+		background-size: cover;
 	}
+
 	#content_3 p{
 		width: 100%;
 		padding-bottom: 100px;
@@ -462,9 +657,10 @@ Key Frames create transitions without input.
 		position: fixed;
 		width: 100%;
 		z-index: 5;
-		left: 0;
+		//left: 0;
 	}
 	#slide_container{
+		position: absolute;
 		width: 100%;
 		z-index: 6;
 		top: 10%;
@@ -480,9 +676,44 @@ Key Frames create transitions without input.
 		bottom: 0;
 		padding: 10px 50px 10px 50px;
 	}
+
+	#footer{
+		position: relative;
+		margin: auto;
+		float: none;
+		width: 100%;
+		padding: 50px 50px;
+		background: rgba(1, 1, 1, 0.7);
+		transition: background 1s;
+	}
+		#footer:hover{
+			transition: background 1s;
+		}
+		#footer p{
+			position: relative;
+			width: 100%;
+			font: 12px sans-serif;
+			padding: 10px 50px 10px 50px ;
+		}
+		#footer img{
+			display: block;
+			position: relative;
+			margin: auto;
+			float: none;
+			width: 20%;
+			padding: 5% 10% 10% 10%;
+		}
+		#footer_box{
+			display: none;
+			width: 100%;
+			position: absolute;
+			margin: 50px auto 50px auto;
+			padding: 40px 0px 15px 0px;
+			bottom: 0;
+		}
+
+
 }
-body, div, h1, h2, h3, p, ul, li{ margin: 0px; padding: 0px; box-sizing: border-box; display: block;} 
-a, ul, li{ cursor: pointer; text-decoration: none; list-style: none;}
 
 
 

@@ -1,23 +1,21 @@
-var i = 0;
-var time = 5000; // Microseconds
+
 var images = [];
-
-window.addEventListener("scroll", parallax);
-window.addEventListener("scroll", fixNavbar);
-
 images[0] = 'assets/images/Screenshot_0.png';
 images[1] = 'assets/images/Screenshot_1.png';
 images[2] = 'assets/images/Screenshot_2.png';
-images[3] = 'assets/images/Screenshot_3.png';
+images[3] = 'assets/images/Ferrari_10.jpg';
+images[4] = 'assets/images/Ferrari_24.jpg';
+images[5] = 'assets/images/Ferrari_33.jpg';
 
+// Change image dsiplayed inside slideshow
+var i = 0;
 function changeImage(){
-	var slide = document.getElementById("slide_image");
+	console.log("changeImage() => images[" + i + "] = " + images[i]);
 
-	if( i < images.length - 1 ){
-		slide.src = images[i];
-		i++;
-	}
+	var slide = document.getElementById("slide_image");
+	if( i < images.length ) i++;
 	else i = 0;
+	slide.src = images[i];
 }
 function openSlideShow(){
 	changeImage();
@@ -28,23 +26,32 @@ function closeSlideShow(){
 	document.getElementById('slideshow').style.height = '0%';
 }
 
+
+window.addEventListener("scroll", fixNavbar);
 function fixNavbar(){
-	if( window.pageYOffset >= 150 ){
-		document.getElementById("navbar").style.position = 'fixed';
-		document.getElementById("navbar").style.width = '80%';
-		document.getElementById("navbar").style.top = '0';
-		document.getElementById('content').style.marginTop = '40px';
-	}
-	else{
-		document.getElementById("navbar").style.position = 'relative'
-		document.getElementById("navbar").style.width = '100%';
-		document.getElementById("navbar").style.top = '100';
-		document.getElementById('content').style.marginTop = '0px';
+	if ( window.matchMedia("(min-width: 768px)" ).matches ){
+
+		if( window.pageYOffset >= 150 ){
+			document.getElementById("header").style.display = 'none';
+
+			document.getElementById("navbar").style.position = 'fixed';
+			document.getElementById("navbar").style.width = '80%';
+			document.getElementById("navbar").style.top = '0';
+			document.getElementById('content').style.marginTop = '-150px';
+		}
+		else{
+			document.getElementById("header").style.display = 'block';
+
+			document.getElementById("navbar").style.position = 'relative'
+			document.getElementById("navbar").style.width = '100%';
+			document.getElementById("navbar").style.top = '100';
+			document.getElementById('content').style.marginTop = '0px';
+		}
 	}
 }
 
+
 function openSlideMenu(){
-	/* Viewport >m 400 pixels wide */
 	if ( window.matchMedia("(min-width: 768px)").matches ){
 		document.getElementById('slide-menu').style.width = '25%';
 	} 
@@ -56,25 +63,16 @@ function closeSlideMenu(){
    	document.getElementById('slide-menu').style.width = '0'; 
 }
 
-function parallax(){
-	//document.getElementById("parallax_1").style.top = (window.pageYOffset/2) + 'px';	
-	document.getElementById("parallax_2").style.top = -(window.pageYOffset/2) + 'px';
-	document.getElementById("parallax_3").style.top = -(window.pageYOffset/2) + 'px';
 
-	if( window.pageYOffset >= 2000 ){
-		document.getElementById("logo").style.opacity = '1';
-	}
-	else{
-		document.getElementById("social").style.opacity = '0';
-	}
-}
-
+// Smooth scrolling between content sections
+var time = 5000; 
 function smoothScroll( elementId ){
-	var offset = 50; // Might need to make responsive
+	var offset = 20; // Might need to make responsive
 	var current = window.pageYOffset;
-	var destination = document.getElementById( elementId ).offsetTop;
+	var destination = document.getElementById(elementId).offsetTop;
 
-	var timer = setInterval( function(){
+	var timer = setInterval( 
+		function(){
 		if( current <= destination ){
 			current = current + offset;
 			window.scrollTo( 0, current );
@@ -93,6 +91,23 @@ function smoothScroll( elementId ){
 		}
 	}, 1 );
 }
+
+
+//Opens and closes hidden content
+var contentOpen = false;
+function expandContent( elementID ){
+	console.log("expandContent( elementID )");
+
+	if( contentOpen == true){
+		document.getElementById('specifications').style.display = 'none';
+		contentOpen = false;
+	}
+	else{
+		document.getElementById('specifications').style.display = 'block';
+		contentOpen = true;
+	}
+}
+
 
 
 
