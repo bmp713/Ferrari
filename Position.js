@@ -37,7 +37,7 @@ function fixNavbar(){
 			document.getElementById("navbar").style.position = 'fixed';
 			document.getElementById("navbar").style.width = '80%';
 			document.getElementById("navbar").style.top = '0';
-			document.getElementById('content').style.marginTop = '-150px';
+			document.getElementById('content').style.marginTop = '150px';
 		}
 		else{
 			document.getElementById("header").style.display = 'block';
