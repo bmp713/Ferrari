@@ -1,5 +1,5 @@
 body, div, h1, h2, h3, p, ul, li{ margin: 0px; padding: 0px; box-sizing: border-box; display: block;} 
-a{ cursor: pointer; text-decoration: none; }
+a, ul, li{ cursor: pointer;}
 
 #container{
 	overflow: hidden;
@@ -121,7 +121,7 @@ a{ cursor: pointer; text-decoration: none; }
 			position: relative;
 			margin: 100px auto;
 			width: 30%;
-			padding: 15px 10px;
+			padding: 15px 100px;
 
 			color: rgba(200, 200, 200, 1);
 			font: 16px sans-serif;

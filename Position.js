@@ -13,7 +13,7 @@ function changeImage(){
 	console.log("changeImage() => images[" + i + "] = " + images[i]);
 
 	var slide = document.getElementById("slide_image");
-	if( i < images.length ) i++;
+	if( i < images.length - 1) i++;
 	else i = 0;
 	slide.src = images[i];
 }
@@ -33,7 +33,6 @@ function fixNavbar(){
 
 		if( window.pageYOffset >= 150 ){
 			document.getElementById("header").style.display = 'none';
-
 			document.getElementById("navbar").style.position = 'fixed';
 			document.getElementById("navbar").style.width = '80%';
 			document.getElementById("navbar").style.top = '0';
@@ -41,7 +40,6 @@ function fixNavbar(){
 		}
 		else{
 			document.getElementById("header").style.display = 'block';
-
 			document.getElementById("navbar").style.position = 'relative'
 			document.getElementById("navbar").style.width = '100%';
 			document.getElementById("navbar").style.top = '100';
@@ -66,30 +64,37 @@ function closeSlideMenu(){
 
 // Smooth scrolling between content sections
 var time = 5000; 
-function smoothScroll( elementId ){
+function smoothScroll( elementId, yOffset ){
 	var offset = 20; // Might need to make responsive
 	var current = window.pageYOffset;
 	var destination = document.getElementById(elementId).offsetTop;
+	//yOffset = 350;
+	destination = destination + yOffset;
+	console.log("YOffset = " + yOffset );
 
 	var timer = setInterval( 
 		function(){
-		if( current <= destination ){
-			current = current + offset;
-			window.scrollTo( 0, current );
-			if( current >= destination ){
-				clearInterval( timer );
-				window.scrollTo( 0, destination );
-			}
-		}
-		if( current >= destination ){
-			current = current - offset;
-			window.scrollTo( 0, current );
+			console.log('Destination = ' + destination );
+        	console.log('Current = ' + current );
+
 			if( current <= destination ){
-				clearInterval( timer );
-				window.scrollTo( 0, destination );
+				current = current + offset;
+				window.scrollTo( 0, current );
+				if( current >= destination ){
+					clearInterval( timer );
+					window.scrollTo( 0, destination );
+				}
 			}
-		}
-	}, 1 );
+			if( current >= destination ){
+				current = current - offset;
+				window.scrollTo( 0, current );
+				if( current <= destination ){
+					clearInterval( timer );
+					window.scrollTo( 0, destination );
+				}
+			}
+		}, 1 
+	);
 }
 
 
