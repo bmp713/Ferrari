@@ -26,7 +26,7 @@
     	<div id="slide-menu">
        		<a id="close-slide" onclick="closeSlideMenu()"><span style="font-size: 16px;">&#8592;</span></a>
        		<a onclick="smoothScroll('header', 0)">Home</a>
-       		<a onclick="smoothScroll('content_2', 500)">Gallery</a>
+       		<a onclick="smoothScroll('background_2', 500)">Gallery</a>
        		<a onclick="smoothScroll('content_3', 500)">Specifications</a>
        		<a onclick="smoothScroll('footer', 0)">Contact</a>
        		<a onclick="openSlideShow()">Slideshow</a>
@@ -42,8 +42,9 @@
 
    		<div id="navbar">
         	<a onclick="openSlideMenu()">Menu</a>
-            <a onclick="smoothScroll('navbar', 0)">Home</a>
-           	<a onclick="smoothScroll('background_2', 0)">Gallery</a>
+            <a onclick="smoothScroll('header', 0)">Home</a>
+           	<a onclick="smoothScroll('background_2', 500)">Gallery</a>
+           	<a onclick="smoothScroll('content_3', 500)">Specifications</a>
          	<a onclick="smoothScroll('footer', 0)">Contact</a>
         </div>
 
@@ -51,27 +52,32 @@
 
 			<div id="background_1">
 				<div id="content_1">
-
    					<h1 id="banner">Ferrari | F488<br>
-   						<p style="font:18px sans-serif;">Performance and elegance.</p><br>
+   						<p style="font:18px sans-serif;">Performance and elegance.
+   						</p><br>
+						<p style="font:12px sans-serif;">
+						I created this site to practice CSS and Javascript DOM manipulations.<br>
+						I re-wrote a few jQuery features to practice pure Javascript.<br><br>
+						There is no use of any libraries or frameworks. <br><br>
+
+					    <br>This site is not affiliated with Ferrari.<br><br><br>
+						</p>
 	   					<a onclick="expandContent('banner')" class="content_1_expand" id="expandButton">Expand<br></a>
-	   					<p id="specifications">
-		   					<br><br>MSRP: From $280,900<br>
-							Horsepower: 660 hp<br>
-							MPG: 15 city / 22 highway<br>	
-							Torque: 560 lb-ft<br>
-							Curb weight: 3,362 lbs<br>
-							Fuel tank capacity: 20.6 gal<br>
-							Dimensions: 180″ L x 77″ W x 48″<br>
+	   					<p id="specifications" style="width: 75%;">
+		   				<br><br>MSRP: From $280,900<br>
+						Horsepower: 660 hp<br>
+						MPG: 15 city / 22 highway<br>	
+						Torque: 560 lb-ft<br>
+						Curb weight: 3,362 lbs<br>
+						Fuel tank capacity: 20.6 gal<br>
+						Dimensions: 180″ L x 77″ W x 48″<br>
 						</p>
    					</h1>
-
 				</div>
 			</div>
 			
 			<div id="background_2">
 				<div id="content_2">
-
 					<div id="column_1">
 						<h1>Ferrari F488</h1><br>
 						<p>
@@ -83,7 +89,6 @@
 							in Formula 1. The body computer system was developed by Magneti Marelli Automotive Lighting.
 						</p>
 					</div>
-					
 					<div id="column_2">
 						<img src="assets/images/Ferrari_8.jpg">
 						<p>Price: $249,500
@@ -95,7 +100,6 @@
 						Ferrari F458 Limited Edition<br>
 						</p>
 					</div>
-
 				</div>
 			</div>
 			
@@ -123,13 +127,13 @@
 			
 			<div id="footer">
 				<div id="footer_social">
-					<a href="http://www.twitter.com/ferrari">
+					<a href="http://www.twitter.com/ferrari" target="#">
 						<img src="assets/images/Icon_twitter.png"></a>
-					<a href="http://www.instagram.com/ferrari">
+					<a href="http://www.instagram.com/ferrari" target="#">
 						<img src="assets/images/Icon-instagram.png"></a>
-					<a href="http://www.facebook.com/Ferrari">
+					<a href="http://www.facebook.com/Ferrari" target="#">
 						<img src="assets/images/Icon_facebook.png"></a>
-					<a href="https://www.youtube.com/channel/UCd8iY-kEHtaB8qt8MH--zGw">
+					<a href="https://www.youtube.com/channel/UCd8iY-kEHtaB8qt8MH--zGw" target="#">
 						<img src="assets/images/Icon_youtube.png"></a>
 				</div>
 		
