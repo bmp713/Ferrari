@@ -35,6 +35,8 @@ function closeSlideShow(){
 // Fix navigation bar after scrolling past header
 window.addEventListener("scroll", fixNavbar);
 function fixNavbar(){
+	var current = window.pageYOffset;
+	console.log('Current = ' + current );
 	if ( window.matchMedia("(min-width: 768px)" ).matches ){
 
 		if( window.pageYOffset >= 150 ){
@@ -72,17 +74,17 @@ function closeSlideMenu(){
 // Elastic mmooth scrolling between content sections
 function smoothScroll( elementId ){
 	var speed = 1;
-    var offset = 25; 
+    var offset = 10; 
     var current = window.pageYOffset;
     var destination = document.getElementById( elementId ).offsetTop;
     console.log('Destination = ' + destination );
+    console.log('Current = ' + current );
+
 
     var timer = setInterval( function(){
         console.log('Current = ' + current );
         console.log('Offset = ' + offset );
-        if( offset < 50 ){
-            //offset = offset * 2;
-        }
+
         if( current <= destination ){
             current = current + offset;
             window.scrollTo( 0, current );

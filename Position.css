@@ -65,7 +65,7 @@ a, ul, li{ cursor: pointer;}
 	position: relative;
 	width: 100%;
 	z-index: 2;
-	background: rgba(100, 0, 0, 0.9);
+	background: rgba(100, 0, 0, 0);
 	animation-name: fadein; animation-duration: 3s;
 }
 	#navbar a{
@@ -78,7 +78,7 @@ a, ul, li{ cursor: pointer;}
 		color: rgb(200, 200, 200);
 		text-align: center;
 		font: 14px sans-serif;
-		background: rgba(50, 1, 1, 0.9);
+		background: rgba(50, 1, 1, 0.7);
    		transition: color 1s, background 1s;
    		animation-name: fadein; animation-duration: 4s;
 	}
@@ -120,7 +120,7 @@ a, ul, li{ cursor: pointer;}
 		#banner{
 			position: relative;
 			margin: 0px auto 0px;
-			padding: 50px 50px 125px 50px;
+			padding: 75px 50px 125px 50px;
 			width: 100%;
 			z-index: 3;
 
@@ -557,7 +557,7 @@ Key Frames create transitions without input. */
 		#specifications{
 			position: relative;
 			display: none;
-			margin: 50px auto 0px auto;
+			margin: 50px auto 50px auto;
 			padding: 50px 50px;
 			color: white;
 			font: 12px sans-serif;
